@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+</head>
+<body>
+    List of teams
+    <table>
+        {{range .}}
+            <tr>
+                <th>Team Name</th>
+                <th>Team ID</th>
+                <th>Description</th>
+                <th>Members</th>
+            </tr>
+            <tr>
+                <th>{{.TeamName}}</th>
+                <th>{{.TeamID}}</th>
+                <th>{{.Description}}</th>
+                <th>{{.Members | len}}</th>
+            </tr>
+        {{end}}
+    </table>
+</body>
+</html>
